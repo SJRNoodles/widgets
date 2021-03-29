@@ -1,0 +1,36 @@
+<html>
+<style>
+#screen{
+background-color:black;
+color:green;
+width:180px;
+height:32px;
+overflow:scroll;
+}
+button{
+background-color:grey;
+border:none;
+padding:26px;
+}
+body{
+background-color:lightgrey;
+}
+</style>
+<script>
+var string="";
+function addThing(item){
+string=string+item;
+document.getElementById("screen").innerHTML = string;
+}
+function doi(){
+document.getElementById("screen").innerHTML = eval(string);
+string="";
+}
+</script>
+<p id="screen">numbers appear here</p>
+<button onclick="addThing('1');">1</button><button onclick="addThing('2');">2</button><button onclick="addThing('3');">3</button><br>
+<button onclick="addThing('4');">4</button><button onclick="addThing('5');">5</button><button onclick="addThing('6');">6</button><br>
+<button onclick="addThing('7');">7</button><button onclick="addThing('8');">8</button><button onclick="addThing('9');">9</button><br>
+<button onclick="addThing('0');">0</button><button onclick="addThing('+');">+</button><button onclick="doi();">></button>
+
+</html>
